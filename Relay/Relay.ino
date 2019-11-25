@@ -15,16 +15,18 @@ void setup() {
   
 
 }
-
+int a = digitalRead(realyPin);
 void loop() {
   // put your main code here, to run repeatedly:
-  a= digitalRead(realyPin);
+  a = digitalRead(realyPin);
   if(a == HIGH){
     lcd.setCursor(1,1);
     lcd.print("Close");
+    delay(3000);
     } else {
       lcd.setCursor(1,1);
       lcd.print("Open");
+      delay(3000);
       }
 
 }
